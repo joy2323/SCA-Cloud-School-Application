@@ -31,3 +31,17 @@
 
                 EXPOSE 8000
     ###  For exposing the port 8000 from the container
+
+
+3. After creating the Dockerfile, I created the Docker image. From my terminal, I navigate to the root folder of my project and ran:-
+
+        docker build -t sca-cloud-school-application .
+
+# Where the -t is used to specify the tag/name of the Docker image, and  the dot (.) means the current folder will be used as the context for the image to be built.
+
+4. After building the Docker image (sca-cloud-school-application) I ran it using:-
+
+            docker run -p 8000:8000 -d sca-cloud-school-application
+
+
+5. The application can be accessed from the browser at  http://localhost:8000/
